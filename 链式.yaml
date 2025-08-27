@@ -3,6 +3,16 @@ allow-lan: true
 mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
+dns:
+    enable: true
+    ipv6: false
+    default-nameserver: [223.5.5.5, 119.29.29.29]
+    enhanced-mode: fake-ip
+    fake-ip-range: 198.18.0.1/16
+    use-hosts: true
+    nameserver: ['https://doh.pub/dns-query', 'https://dns.alidns.com/dns-query']
+    fallback: ['https://doh.dns.sb/dns-query', 'https://dns.cloudflare.com/dns-query', 'https://dns.twnic.tw/dns-query', 'tls://8.8.4.4:853']
+    fallback-filter: { geoip: true, ipcidr: [240.0.0.0/4, 0.0.0.0/32] }
 proxies:
   # ===== 香港机场 3 个节点 =====
   - { name: "🇭🇰 香港2-联通IEPL", type: trojan, server: lt.kaiqsz.com, port: 11111, password: 11111111-f77f-46da-8919-bd7f49df62c3, udp: true, skip-cert-verify: true, sni: v1-dy.ixigua.com, network: tcp }
@@ -67,4 +77,5 @@ proxy-groups:
 rules:
   - GEOIP,CN,DIRECT
   - MATCH,🚀 节点选择
+
 
