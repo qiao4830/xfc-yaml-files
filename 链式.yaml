@@ -16,15 +16,15 @@ dns:
     fallback-filter: { geoip: true, ipcidr: [240.0.0.0/4, 0.0.0.0/32] }
 proxies:
   # ===== 香港机场 3 个节点 =====
-  - { name: "🇭🇰 香港2-联通IEPL", type: trojan, server: lt.kaiqsz.com, port: 20745, password: 0cf95637-f77f-46da-8919-bd7f49df62c3, udp: true, skip-cert-verify: true, sni: v1-dy.ixigua.com, network: tcp }
-  - { name: "🇭🇰 香港3-移动IEPL", type: trojan, server: yd.kaiqsz.com, port: 20745, password: 0cf95637-f77f-46da-8919-bd7f49df62c3, udp: true, skip-cert-verify: true, sni: v1-dy.ixigua.com, network: tcp }
-  - { name: "🇭🇰 香港家宽1-联通IEPL", type: trojan, server: lt.kaiqsz.com, port: 56225, password: 0cf95637-f77f-46da-8919-bd7f49df62c3, udp: true, skip-cert-verify: true, sni: v1-dy.ixigua.com, network: tcp }
+  - { name: "🇭🇰 香港2-联通IEPL", type: trojan, server: lt.kaiqsz.com, port: 11111, password: 11111111-f77f-46da-8919-bd7f49df62c3, udp: true, skip-cert-verify: true, sni: v1-dy.ixigua.com, network: tcp }
+  - { name: "🇭🇰 香港3-移动IEPL", type: trojan, server: yd.kaiqsz.com, port: 22222, password: 22222222-f77f-46da-8919-bd7f49df62c3, udp: true, skip-cert-verify: true, sni: v1-dy.ixigua.com, network: tcp }
+  - { name: "🇭🇰 香港家宽1-联通IEPL", type: trojan, server: lt.kaiqsz.com, port: 33333, password: 33333333-f77f-46da-8919-bd7f49df62c3, udp: true, skip-cert-verify: true, sni: v1-dy.ixigua.com, network: tcp }
   # ===== 美国 VPS 节点 =====
   - name: "🇺🇸 美国-Trojan"
     type: trojan
     server: rackus.xiaofanchuan.top
-    port: 19636
-    password: 33643d69-f784-489c-bbdb-2f25ac142656
+    port: 11111
+    password: 11111111-f784-489c-bbdb-2f25ac142656
     udp: true
     sni: rackus.xiaofanchuan.top
     alpn:
@@ -34,8 +34,8 @@ proxies:
   - name: "🇺🇸 美国-VLESS-Vision"
     type: vless
     server: rackus.xiaofanchuan.top
-    port: 18472
-    uuid: 33643d69-f784-489c-bbdb-2f25ac142656
+    port: 22222
+    uuid: 22222222-f784-489c-bbdb-2f25ac142656
     udp: true
     network: tcp
     tls: true
@@ -47,8 +47,8 @@ proxies:
     type: socks5
     server: 38.143.18.89
     port: 26168
-    username: 5d1
-    password: 8fa979c
+    username: 11111
+    password: 22222
     udp: true
 proxy-groups:
   # 香港节点选择
@@ -86,3 +86,4 @@ proxy-groups:
 rules:
   - GEOIP,CN,DIRECT
   - MATCH,🚀 节点选择
+
